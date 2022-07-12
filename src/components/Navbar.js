@@ -17,7 +17,7 @@ function Navbar() {
                         <li>Testimonials</li>
                     </ul>
                 </List>
-                <Button>Contact Us</Button>
+                <Button>Contact</Button>
             </Right>
         </Wrapper>
     );
@@ -45,7 +45,7 @@ const Name = styled.div`
 
 const Right = styled.div`
     display: flex;
-    /* flex: 1; */
+    flex: 1;
     align-items: center;
     justify-content: center;
     font-weight: 400;
@@ -69,6 +69,5 @@ const List = styled.div`
 
 const Button = styled.button`
     flex: 2;
-    font-size: 20px;
     border: 1px solid var(--orange);
 `;
