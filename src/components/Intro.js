@@ -86,6 +86,7 @@ const Name = styled.div`
         font-size: 16px;
         color: var(--gray);
         margin-top: 10px;
+        padding-right: 5rem;
     }
 `;
 
@@ -150,7 +151,7 @@ const Top = styled.div`
 
 const Bottom = styled.div`
     top: 18.2rem;
-    left: 3.5%;
+    left: 7%;
 `;
 
 const BlurLeft = styled.div`
