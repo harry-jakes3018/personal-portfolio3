@@ -6,6 +6,7 @@ import shopify from "../img/Shopify.png";
 import facebook from "../img/Facebook.png";
 import { themeContext } from "../Context";
 import { useContext } from "react";
+import { motion } from "framer-motion";
 
 function Works() {
     const theme = useContext(themeContext);
@@ -34,7 +35,12 @@ function Works() {
 
             {/* Right Side */}
             <Right>
-                <MainCircle>
+                <MainCircle
+                    initial={{ rotate: 45 }}
+                    whileInView={{ rotate: 0 }}
+                    viewport={{ margin: "-40px" }}
+                    transition={{ duration: 3.5, type: "spring" }}
+                >
                     <SecondaryCircle>
                         <img src={upwork} alt="Upwork" />
                     </SecondaryCircle>
@@ -120,7 +126,7 @@ const Right = styled.div`
     position: relative;
 `;
 
-const MainCircle = styled.div`
+const MainCircle = styled(motion.div)`
     left: 9rem;
     position: relative;
     width: 18rem;
@@ -129,6 +135,7 @@ const MainCircle = styled.div`
     box-shadow: var(--smboxShadow);
     top: 2rem;
     background: white;
+    z-index: 999;
 
     & > * {
         position: absolute;
@@ -183,7 +190,7 @@ const BackCircle = styled.div`
     height: 13rem;
     width: 13rem;
     border-radius: 50%;
-    z-index: -1;
+    z-index: 1;
 
     &.blueCircle {
         background: #1949b8;

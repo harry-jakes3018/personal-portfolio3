@@ -11,8 +11,11 @@ import glassesimoji from "../img/glassesimoji.png";
 import FloatingDiv from "./FloatingDiv";
 import { themeContext } from "../Context";
 import { useContext } from "react";
+import { motion } from "framer-motion";
 
 function Intro() {
+    const transition = { duration: 2, type: "spring" };
+
     const theme = useContext(themeContext);
     const darkMode = theme.state.darkMode;
 
@@ -40,11 +43,25 @@ function Intro() {
                 <img src={vector1} alt="Vector 1" />
                 <img src={vector2} alt="Vector 2" />
                 <img src={boy} alt="Boy" />
-                <img src={glassesimoji} alt="" />
-                <Top>
+                <motion.img
+                    initial={{ left: "-36%" }}
+                    whileInView={{ left: "-24%" }}
+                    transition={transition}
+                    src={glassesimoji}
+                    alt="Glass"
+                />
+                <Top
+                    initial={{ top: "-4%", left: "74%" }}
+                    whileInView={{ left: "68%" }}
+                    transition={transition}
+                >
                     <FloatingDiv image={crown} text1="Web" text2="Developer" />
                 </Top>
-                <Bottom>
+                <Bottom
+                    initial={{ left: "9rem", top: "18rem" }}
+                    whileInView={{ left: "2.2rem" }}
+                    transition={transition}
+                >
                     <FloatingDiv image={thumbup} text1="UI" text2="Designer" />
                 </Bottom>
 
@@ -151,12 +168,12 @@ const Right = styled.div`
     }
 `;
 
-const Top = styled.div`
+const Top = styled(motion.div)`
     top: -4%;
     left: 68%;
 `;
 
-const Bottom = styled.div`
+const Bottom = styled(motion.div)`
     top: 18.2rem;
     left: 7%;
 `;

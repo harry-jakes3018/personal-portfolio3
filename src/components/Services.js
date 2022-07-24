@@ -5,8 +5,14 @@ import humble from "../img/humble.png";
 import Card from "./Card";
 import { themeContext } from "../Context";
 import { useContext } from "react";
+import { motion } from "framer-motion";
 
 function Services() {
+    const transition = {
+        duration: 1,
+        type: "spring",
+    };
+
     const theme = useContext(themeContext);
     const darkMode = theme.state.darkMode;
 
@@ -29,7 +35,11 @@ function Services() {
 
             {/* Right Side */}
             <Cards>
-                <First>
+                <First
+                    initial={{ left: "25rem" }}
+                    whileInView={{ left: "14rem" }}
+                    transition={transition}
+                >
                     <Card
                         emoji={heartEmoji}
                         heading="Design"
@@ -37,7 +47,11 @@ function Services() {
                     />
                 </First>
 
-                <Second>
+                <Second
+                    initial={{ left: "-11rem", top: "12rem" }}
+                    whileInView={{ left: "-4rem" }}
+                    transition={transition}
+                >
                     <Card
                         emoji={glasses}
                         heading="Developer"
@@ -45,7 +59,11 @@ function Services() {
                     />
                 </Second>
 
-                <Third>
+                <Third
+                    initial={{ top: "19rem", left: "25rem" }}
+                    whileInView={{ left: "12rem" }}
+                    transition={transition}
+                >
                     <Card
                         emoji={humble}
                         heading="UI/UX"
@@ -107,16 +125,16 @@ const Cards = styled.div`
     }
 `;
 
-const First = styled.div`
+const First = styled(motion.div)`
     left: 14rem;
 `;
 
-const Second = styled.div`
+const Second = styled(motion.div)`
     top: 8rem;
     left: -4rem;
 `;
 
-const Third = styled.div`
+const Third = styled(motion.div)`
     top: 19rem;
     left: 12rem;
 `;
