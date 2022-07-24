@@ -73,6 +73,13 @@ const Wrapper = styled.div`
     display: flex;
     height: 90vh;
     margin-top: 4rem;
+
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        height: 55rem;
+        padding: 0;
+        gap: 5rem;
+    }
 `;
 
 const Awesome = styled.div`
@@ -124,6 +131,13 @@ const Blur = styled.div`
 
 const Right = styled.div`
     position: relative;
+
+    @media screen and (max-width: 480px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+        transform: scale(0.7);
+    }
 `;
 
 const MainCircle = styled(motion.div)`
@@ -139,6 +153,10 @@ const MainCircle = styled(motion.div)`
 
     & > * {
         position: absolute;
+    }
+
+    @media screen and (max-width: 480px) {
+        position: static;
     }
 `;
 
@@ -202,5 +220,9 @@ const BackCircle = styled.div`
         background: #f5c32c;
         left: 18rem;
         top: 8rem;
+    }
+
+    @media screen and (max-width: 480px) {
+        left: 8rem !important;
     }
 `;

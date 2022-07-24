@@ -83,6 +83,10 @@ const List = styled.div`
             color: var(--orange);
         }
     }
+
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
 `;
 
 const Button = styled.button`

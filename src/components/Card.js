@@ -36,6 +36,10 @@ const Wrapper = styled.div`
         color: var(--gray);
         font-size: 16px;
     }
+
+    @media screen and (max-width: 480px) {
+        width: auto;
+    }
 `;
 
 const Button = styled.button`

@@ -85,6 +85,14 @@ const Wrapper = styled.div`
     margin-bottom: 8rem;
     margin-top: 9rem;
     margin-bottom: 13rem;
+
+    @media screen and (max-width: 480px) {
+        margin-top: 0;
+        flex-direction: column;
+        gap: 5rem;
+        height: 66rem;
+        padding: 0;
+    }
 `;
 
 const Awesome = styled.div`
@@ -122,6 +130,17 @@ const Cards = styled.div`
 
     & > * {
         position: absolute;
+    }
+
+    @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        gap: 17rem;
+        margin-left: 0;
+
+        & > * {
+            position: static;
+        }
     }
 `;
 

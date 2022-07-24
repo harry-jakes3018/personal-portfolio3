@@ -79,6 +79,24 @@ const Wrapper = styled.div`
     display: flex;
     height: 77vh;
     margin-top: 6rem;
+
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        gap: 7rem;
+        height: 64rem;
+
+        .i-right {
+            transform: scale(0.8);
+            left: -3rem;
+        }
+        .i-right .blur {
+            display: none;
+        }
+        .floating-div:nth-of-type(1) {
+            /* display: none; */
+            top: -7rem !important;
+        }
+    }
 `;
 
 const Left = styled.div`
@@ -166,11 +184,20 @@ const Right = styled.div`
         border-radius: 50%;
         padding: 0;
     }
+
+    @media screen and (max-width: 480px) {
+        transform: scale(0.8);
+        left: -3rem;
+    }
 `;
 
 const Top = styled(motion.div)`
     top: -4%;
     left: 68%;
+
+    @media screen and (max-width: 480px) {
+        top: -5rem !important;
+    }
 `;
 
 const Bottom = styled(motion.div)`
@@ -189,6 +216,10 @@ const BlurLeft = styled.div`
     z-index: -9;
     top: -18%;
     left: 56%;
+
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
 `;
 
 const BlurRight = styled(BlurLeft)`
@@ -197,4 +228,8 @@ const BlurRight = styled(BlurLeft)`
     width: 21rem;
     height: 11rem;
     left: -9rem;
+
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
 `;

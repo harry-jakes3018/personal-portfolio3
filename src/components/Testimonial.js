@@ -86,6 +86,10 @@ const Wrapper = styled.div`
     .swiper-pagination-bullet-active {
         background: var(--orange);
     }
+
+    @media screen and (max-width: 480px) {
+        padding: 0;
+    }
 `;
 
 const Heading = styled.div`
@@ -137,6 +141,11 @@ const Slider = styled.div`
         width: 6rem;
         height: 6rem;
         border-radius: 50%;
+
+        @media screen and (max-width: 480px) {
+            width: 70px;
+            height: 70px;
+        }
     }
 
     & > span {

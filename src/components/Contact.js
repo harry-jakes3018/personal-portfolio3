@@ -67,6 +67,13 @@ const Wrapper = styled.div`
     display: flex;
     height: 80vh;
     margin-top: 4rem;
+
+    @media screen and (max-width: 480px) {
+        padding: 0;
+        flex-direction: column;
+        gap: 5rem;
+        height: 40rem;
+    }
 `;
 
 const Left = styled.div``;
@@ -128,6 +135,10 @@ const User = styled.input`
     border: 2px solid var(--orange);
     border-radius: 8px;
     font-size: 16px;
+
+    @media screen and (max-width: 480px) {
+        width: 16rem;
+    }
 `;
 
 const TextArea = styled.textarea`
@@ -138,6 +149,10 @@ const TextArea = styled.textarea`
     border: 2px solid var(--orange);
     border-radius: 8px;
     font-size: 16px;
+
+    @media screen and (max-width: 480px) {
+        width: 16rem;
+    }
 `;
 
 const Button = styled.button``;

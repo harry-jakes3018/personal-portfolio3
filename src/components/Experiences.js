@@ -31,6 +31,10 @@ const Wrapper = styled.div`
     gap: 5rem;
     height: 30vh;
     margin-bottom: 8rem;
+
+    @media screen and (max-width: 480px) {
+        transform: scale(0.7);
+    }
 `;
 
 const Achievement = styled.div`

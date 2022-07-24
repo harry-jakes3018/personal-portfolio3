@@ -44,6 +44,10 @@ const Content = styled.div`
     margin-top: 4rem;
     gap: 4rem;
     color: white;
+
+    @media screen and (max-width: 480px) {
+        transform: scale(0.5);
+    }
 `;
 
 const Icons = styled.div`
