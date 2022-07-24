@@ -1,10 +1,6 @@
 import styled from "styled-components";
-import { themeContext } from "../Context";
-import { useContext } from "react";
 
 function Experiences() {
-    const theme = useContext(themeContext);
-    const darkMode = theme.state.darkMode;
 
     return (
         <Wrapper>
