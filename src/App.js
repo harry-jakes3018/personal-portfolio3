@@ -1,3 +1,4 @@
+import Contact from "./components/Contact";
 import Experiences from "./components/Experiences";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
@@ -16,6 +17,7 @@ function App() {
             <Works />
             <Portfolio />
             <Testimonial />
+            <Contact />
         </div>
     );
 }
