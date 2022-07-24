@@ -41,7 +41,7 @@ function Contact() {
                         Get in Touch
                     </span>
                     <span>Contact Me</span>
-                    <LBlur1></LBlur1>
+                    {!darkMode && <LBlur1></LBlur1>}
                 </Awesome>
             </Left>
 
@@ -53,7 +53,7 @@ function Contact() {
                     <TextArea name="message" placeholder="Message" />
                     <Button type="submit">Send</Button>
                     <span>{done && "Thanks for contacting me!"}</span>
-                    <RBlur1></RBlur1>
+                    {!darkMode && <RBlur1></RBlur1>}
                 </Form>
             </Right>
         </Wrapper>
@@ -83,6 +83,10 @@ const Awesome = styled.div`
     flex-direction: column;
     position: relative;
 
+    & > span {
+        z-index: 999;
+    }
+
     & > :first-child,
     & > :nth-child(2) {
         color: var(--black);
@@ -108,7 +112,7 @@ const LBlur1 = styled.div`
     height: 14rem;
     border-radius: 50%;
     filter: blur(92px);
-    z-index: -9;
+    z-index: 1;
     left: -20rem;
     top: 12rem;
 `;
@@ -125,6 +129,10 @@ const Form = styled.form`
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+
+    & > span {
+        z-index: 999;
+    }
 `;
 
 const User = styled.input`
@@ -135,6 +143,7 @@ const User = styled.input`
     border: 2px solid var(--orange);
     border-radius: 8px;
     font-size: 16px;
+    z-index: 999;
 
     @media screen and (max-width: 480px) {
         width: 16rem;
@@ -149,13 +158,16 @@ const TextArea = styled.textarea`
     border: 2px solid var(--orange);
     border-radius: 8px;
     font-size: 16px;
+    z-index: 999;
 
     @media screen and (max-width: 480px) {
         width: 16rem;
     }
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+    z-index: 999;
+`;
 
 const RBlur1 = styled(LBlur1)`
     background: var(--purple);

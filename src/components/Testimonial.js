@@ -7,8 +7,13 @@ import profilePic4 from "../img/profile4.jpg";
 import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useContext } from "react";
+import { themeContext } from "../Context";
 
 function Testimonial() {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
+
     const clients = [
         {
             img: profilePic1,
@@ -34,8 +39,12 @@ function Testimonial() {
                 <span>Clients always get</span>
                 <span> Exceptional Work</span>
                 <span> from me...</span>
-                <Blur1></Blur1>
-                <Blur2></Blur2>
+                {!darkMode && (
+                    <>
+                        <Blur1></Blur1>
+                        <Blur2></Blur2>
+                    </>
+                )}
             </Heading>
 
             {/* Slider */}
@@ -100,6 +109,10 @@ const Heading = styled.div`
         font-weight: bold;
     }
 
+    & > span {
+        z-index: 999;
+    }
+
     & > span:nth-child(2) {
         color: var(--orange);
     }
@@ -113,7 +126,7 @@ const Blur1 = styled.div`
     border-radius: 50%;
     background: #edd0ff;
     filter: blur(72px);
-    z-index: -9;
+    z-index: 1;
     left: 38rem;
     top: 16rem;
 `;

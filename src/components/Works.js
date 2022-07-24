@@ -30,7 +30,7 @@ function Works() {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </span>
                 <Button>Download CV</Button>
-                <Blur></Blur>
+                {!darkMode && <Blur></Blur>}
             </Awesome>
 
             {/* Right Side */}
@@ -109,6 +109,7 @@ const Button = styled.button`
     width: 8rem;
     height: 2rem;
     margin-top: 1rem;
+    z-index: 999;
 `;
 
 const Blur = styled.div`
@@ -119,7 +120,7 @@ const Blur = styled.div`
     border-radius: 50%;
     background: #edd0ff;
     filter: blur(72px);
-    z-index: -9;
+    z-index: 1;
     left: 15rem;
 
     background: #abf1ff94;

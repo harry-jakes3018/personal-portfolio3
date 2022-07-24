@@ -66,8 +66,12 @@ function Intro() {
                 </Bottom>
 
                 {/* Blur Divs */}
-                <BlurLeft></BlurLeft>
-                <BlurRight></BlurRight>
+                {!darkMode && (
+                    <>
+                        <BlurLeft></BlurLeft>
+                        <BlurRight></BlurRight>
+                    </>
+                )}
             </Right>
         </Wrapper>
     );
@@ -163,18 +167,21 @@ const Right = styled.div`
     & > :first-child {
         transform: scale(0.9);
         left: -15%;
+        z-index: 999;
         top: -9%;
     }
 
     & > :nth-child(2) {
         top: -4.6rem;
         transform: scale(0.7);
+        z-index: 999;
         left: -3rem;
     }
 
     & > :nth-child(3) {
         transform: scale(1.4);
         left: 28%;
+        z-index: 999;
     }
 
     & > :nth-child(4) {
@@ -194,6 +201,7 @@ const Right = styled.div`
 const Top = styled(motion.div)`
     top: -4%;
     left: 68%;
+    z-index: 999;
 
     @media screen and (max-width: 480px) {
         top: -5rem !important;
@@ -203,6 +211,7 @@ const Top = styled(motion.div)`
 const Bottom = styled(motion.div)`
     top: 18.2rem;
     left: 7%;
+    z-index: 999;
 `;
 
 const BlurLeft = styled.div`
@@ -216,6 +225,7 @@ const BlurLeft = styled.div`
     z-index: -9;
     top: -18%;
     left: 56%;
+    z-index: 1;
 
     @media screen and (max-width: 480px) {
         display: none;

@@ -30,7 +30,7 @@ function Services() {
                     Facilis, rerum porro? Autem tempora voluptatum magnam!
                 </span>
                 <Button>Download CV</Button>
-                <Blur></Blur>
+                {!darkMode && <Blur></Blur>}
             </Awesome>
 
             {/* Right Side */}
@@ -70,7 +70,7 @@ function Services() {
                         details="Lorem ipsum dolor sit amet consectetur adipisicing elit."
                     />
                 </Third>
-                <NewBlur></NewBlur>
+                {!darkMode && <NewBlur></NewBlur>}
             </Cards>
         </Wrapper>
     );
@@ -146,16 +146,19 @@ const Cards = styled.div`
 
 const First = styled(motion.div)`
     left: 14rem;
+    z-index: 999;
 `;
 
 const Second = styled(motion.div)`
     top: 8rem;
     left: -4rem;
+    z-index: 999;
 `;
 
 const Third = styled(motion.div)`
     top: 19rem;
     left: 12rem;
+    z-index: 999;
 `;
 
 const NewBlur = styled.div`
@@ -166,7 +169,7 @@ const NewBlur = styled.div`
     border-radius: 50%;
     background: #edd0ff;
     filter: blur(72px);
-    z-index: -9;
+    z-index: 1;
     left: 15rem;
 `;
 

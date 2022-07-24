@@ -70,7 +70,7 @@ const Circle = styled.div`
         bottom: -8px;
         right: -8px;
         position: absolute;
-        z-index: -1;
+        z-index: -1 !important;
         box-shadow: var(--boxShadow);
     }
 `;
