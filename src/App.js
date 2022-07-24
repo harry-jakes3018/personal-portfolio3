@@ -1,5 +1,6 @@
 import Contact from "./components/Contact";
 import Experiences from "./components/Experiences";
+import Footer from "./components/Footer";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
@@ -18,6 +19,7 @@ function App() {
             <Portfolio />
             <Testimonial />
             <Contact />
+            <Footer />
         </div>
     );
 }
