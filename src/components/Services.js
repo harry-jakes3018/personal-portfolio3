@@ -3,13 +3,20 @@ import heartEmoji from "../img/heartemoji.png";
 import glasses from "../img/glasses.png";
 import humble from "../img/humble.png";
 import Card from "./Card";
+import { themeContext } from "../Context";
+import { useContext } from "react";
 
 function Services() {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
+
     return (
         <Wrapper>
             {/* Left Side */}
             <Awesome>
-                <span>My Awesome</span>
+                <span style={{ color: darkMode ? "white" : "" }}>
+                    My Awesome
+                </span>
                 <span>Services</span>
                 <span>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import { themeContext } from "../Context";
+import { useContext } from "react";
 
 function Experiences() {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
+
     return (
         <Wrapper>
             <Achievement>
@@ -55,6 +60,7 @@ const Circle = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
+    color: black;
 
     &::before {
         border-radius: 50%;

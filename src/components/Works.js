@@ -4,13 +4,20 @@ import fiverr from "../img/fiverr.png";
 import amazon from "../img/amazon.png";
 import shopify from "../img/Shopify.png";
 import facebook from "../img/Facebook.png";
+import { themeContext } from "../Context";
+import { useContext } from "react";
 
 function Works() {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
+
     return (
         <Wrapper>
             {/* Left Side */}
             <Awesome>
-                <span>Works for All these</span>
+                <span style={{ color: darkMode ? "white" : "" }}>
+                    Works for All these
+                </span>
                 <span>Brands & Clients</span>
                 <span>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

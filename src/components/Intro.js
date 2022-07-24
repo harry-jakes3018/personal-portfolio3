@@ -9,13 +9,20 @@ import thumbup from "../img/thumbup.png";
 import crown from "../img/crown.png";
 import glassesimoji from "../img/glassesimoji.png";
 import FloatingDiv from "./FloatingDiv";
+import { themeContext } from "../Context";
+import { useContext } from "react";
 
 function Intro() {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
+
     return (
         <Wrapper>
             <Left>
                 <Name>
-                    <span>Hi! I Am</span>
+                    <span style={{ color: darkMode ? "white" : "" }}>
+                        Hi! I Am
+                    </span>
                     <span>Jitendra Garg</span>
                     <span>
                         Front-End Developer with high level of experience in web
