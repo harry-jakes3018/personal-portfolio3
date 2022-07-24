@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import Toggle from "./Toggle";
 
 function Navbar() {
     return (
         <Wrapper>
             <Left>
                 <Name>Jitendra</Name>
-                <span>Toggle</span>
+                <Toggle />
             </Left>
             <Right>
                 <List>
