@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Toggle from "./Toggle";
+import { Link } from "react-scroll";
 
 function Navbar() {
     return (
@@ -11,11 +12,26 @@ function Navbar() {
             <Right>
                 <List>
                     <ul>
-                        <li>Home</li>
-                        <li>Services</li>
-                        <li>Experience</li>
-                        <li>Portfolio</li>
-                        <li>Testimonials</li>
+                        <Link
+                            spy={true}
+                            to="Navbar"
+                            smooth={true}
+                            activeClass="activeClass"
+                        >
+                            <li>Home</li>
+                        </Link>
+                        <Link spy={true} to="Services" es smooth={true}>
+                            <li>Services</li>
+                        </Link>
+                        <Link spy={true} to="Experiences" smooth={true}>
+                            <li>Experience</li>
+                        </Link>
+                        <Link spy={true} to="Portfolio" smooth={true}>
+                            <li>Portfolio</li>
+                        </Link>
+                        <Link spy={true} to="Testimonials" smooth={true}>
+                            <li>Testimonials</li>
+                        </Link>
                     </ul>
                 </List>
                 <Button>Contact</Button>
@@ -60,6 +76,7 @@ const List = styled.div`
         gap: 2rem;
         margin-right: 4rem;
         list-style-type: none;
+        cursor: pointer;
 
         & > li:hover {
             cursor: pointer;

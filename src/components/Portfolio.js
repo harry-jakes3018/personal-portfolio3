@@ -13,7 +13,7 @@ function Portfolio() {
     const darkMode = theme.state.darkMode;
 
     return (
-        <Wrapper>
+        <Wrapper id="Portfolio">
             {/* Heading */}
             <span style={{ color: darkMode ? "white" : "" }}>
                 Recent Projects

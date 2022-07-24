@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 function Experiences() {
     return (
-        <Wrapper>
+        <Wrapper id="Experiences">
             <Achievement>
                 <Circle>8+</Circle>
                 <span>years</span>

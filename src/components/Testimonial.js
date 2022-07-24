@@ -29,7 +29,7 @@ function Testimonial() {
     ];
 
     return (
-        <Wrapper>
+        <Wrapper id="Testimonials">
             <Heading>
                 <span>Clients always get</span>
                 <span> Exceptional Work</span>

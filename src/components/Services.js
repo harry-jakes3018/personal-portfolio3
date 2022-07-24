@@ -17,7 +17,7 @@ function Services() {
     const darkMode = theme.state.darkMode;
 
     return (
-        <Wrapper>
+        <Wrapper id="Services">
             {/* Left Side */}
             <Awesome>
                 <span style={{ color: darkMode ? "white" : "" }}>
